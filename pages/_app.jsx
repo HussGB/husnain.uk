@@ -11,10 +11,10 @@ function App({ Component, pageProps }) {
       <meta property="og:title" content="HussGB" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://hussgb.dev" />
-      <meta property="og:image" content="/assets/img/favicon.ico" />
+      <meta property="og:image" content="/favicons/favicon.ico" />
       <meta property="og:description" content="Hello, I am HussGB mostly called Huss. I am a front and back-end developer, click the website URL to find out more!" />
       <meta name="description" content="Hello, I am HussGB mostly called Huss. I am a front and back-end developer, click the website URL to find out more!" />
-      <meta name="theme-color" content="#74b3fa" />
+      <meta name="theme-color" content="#00008b" />
 
       <title>HussGB</title>
     </Head>

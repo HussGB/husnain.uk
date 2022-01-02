@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
         return (
             <Html>
               <Head>
-                <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+                <link rel="icon" type="image/x-icon" href="/favicons/circle-avatar.png" />
                 <link rel="apple-touch-icon" type="image/x-icon" href="/favicons/favicon.ico"></link>
               </Head>
               <body>

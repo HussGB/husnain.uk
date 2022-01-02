@@ -18,3 +18,23 @@ body {
     background-size: cover;
     background-color:#05144d;
     }
+
+  .badges{
+    width: 50%;
+    display: inline-block;
+  }
+
+  h2 {
+    font: 33px sans-serif;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+.sooncoming {
+  font: 10px sans-serif;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}

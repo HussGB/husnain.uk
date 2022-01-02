@@ -1,7 +1,8 @@
-import { Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Fragment, useRef, useState } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 const username = <h1>HussGB</h1>;
 
 export default function IndexPage() {
@@ -78,11 +79,17 @@ export default function IndexPage() {
     <br></br>
     <br></br>
     <div className=" text-center">
-    <center><img height="150" width="150" src="/favicons/circle-avatar.png"></img></center>
+    <center>
+    <Image
+        height="150" width="150" src="/favicons/circle-avatar.png"
+      />
+      </center>
     <br></br>
     <div className="text-lg leading-6 font-medium text-white">{username}</div><br></br>
     <center>
-    <img data-tip="Verified Developer" alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"></img>
+      <Image 
+      alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"
+      />
     </center>
     </div>
   </div></section>
@@ -92,11 +99,11 @@ export default function IndexPage() {
   </a>
   </div>
   <section id="down-1">
-  <div class="min-h-screen py-6 flex flex-col justify-center mx-auto sm:py-12">
-  <div class="">
-    <div class="h-auto py-20 px-10 w-2/3 bg-gray-900 flex flex-col space-y-5 mx-auto rounded-3xl shadow-xl hover:rotate-1 transition-transform">
-    <h2 class=" font-normal tracking-wide text-2xl text-white">User Description</h2>
-      <h3 class=" font medium text-white text-x1 tracking-wide">Husnain, who is also known as HussGB or Huss is a British front-end and back-end developer.
+  <div className="min-h-screen py-6 flex flex-col justify-center mx-auto sm:py-12">
+  <div className="">
+    <div className="h-auto py-20 px-10 w-2/3 bg-gray-900 flex flex-col space-y-5 mx-auto rounded-3xl shadow-xl hover:rotate-1 transition-transform">
+    <h2 className=" font-normal tracking-wide text-2xl text-white">User Description</h2>
+      <h3 className=" font medium text-white text-x1 tracking-wide">Husnain, who is also known as HussGB or Huss is a British front-end and back-end developer.
       With 3 years of programming experience I know JavaScript/HTML/React (which I'm still learning) and more to go. I prefer JetBrains software when it
       comes to programming but I occasionally use Visual Studio Code as it doesn't eat up my RAM.
       </h3>

@@ -81,7 +81,7 @@ export default function IndexPage() {
     <div className=" text-center">
     <center>
     <Image
-        height="150" width="150" src="/favicons/circle-avatar.png"
+        height="150" width="150" src="/favicons/circle-avatar.png" alt="avatar"
       />
       </center>
     <br></br>
@@ -104,8 +104,8 @@ export default function IndexPage() {
     <div className="h-auto py-20 px-10 w-2/3 bg-gray-900 flex flex-col space-y-5 mx-auto rounded-3xl shadow-xl hover:rotate-1 transition-transform">
     <h2 className=" font-normal tracking-wide text-2xl text-white">User Description</h2>
       <h3 className=" font medium text-white text-x1 tracking-wide">Husnain, who is also known as HussGB or Huss is a British front-end and back-end developer.
-      With 3 years of programming experience I know JavaScript/HTML/React (which I'm still learning) and more to go. I prefer JetBrains software when it
-      comes to programming but I occasionally use Visual Studio Code as it doesn't eat up my RAM.
+      With 3 years of programming experience I know JavaScript/HTML/React (which I am still learning) and more to go. I prefer JetBrains software when it
+      comes to programming but I occasionally use Visual Studio Code as it does not eat up my RAM.
       </h3>
 </div></div></div></section>
 

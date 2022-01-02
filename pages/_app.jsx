@@ -18,6 +18,7 @@ function App({ Component, pageProps }) {
 
       <title>HussGB</title>
     </Head>
+    
     <Component {...pageProps} />
    </>
   )

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #23272a;
+  }
+  
+  img.avatar {
+    border: 3px solid #eee;
+    
+  }
+
+  .back{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:#05144d;
+    }

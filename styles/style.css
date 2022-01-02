@@ -31,10 +31,10 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
-.sooncoming {
-  font: 10px sans-serif;
-  margin-top: 10px;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
+  .sooncoming {
+    font: 10px sans-serif;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
 }

@@ -81,7 +81,7 @@ export default function IndexPage() {
 
 <center>
     <div className="shadow-lg rounded-2xl w-80 bg-white dark:bg-gray-800">
-    <Image alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
+    <Image height="150" width="400" alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
     <div className="flex flex-col items-center justify-center p-4 -mt-16">
         <a href="#" className="block relative">
         <Image

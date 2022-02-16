@@ -81,7 +81,7 @@ export default function IndexPage() {
 
 <center>
     <div className="shadow-lg rounded-2xl w-80 bg-white dark:bg-gray-800">
-    <img alt="profil" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
+    <Image alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
     <div className="flex flex-col items-center justify-center p-4 -mt-16">
         <a href="#" className="block relative">
         <Image
@@ -174,7 +174,7 @@ export default function IndexPage() {
           Arctic Code Vault Contributor
         </h1>
         <p className="mt-2 text-gray-600 text-sm">
-           "Preserving open source software for future generations" - GitHub
+        &quot;Preserving open source software for future generations&quot; by GitHub
         </p>
         <div className="flex item-center mt-2">
         </div>

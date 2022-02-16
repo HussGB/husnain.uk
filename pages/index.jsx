@@ -80,18 +80,18 @@ export default function IndexPage() {
     <br></br>
 
 <center>
-    <div class="shadow-lg rounded-2xl w-80 bg-white dark:bg-gray-800">
-    <img alt="profil" src="/assets/img/bg-img1.jpg" class="rounded-t-lg h-28 w-full mb-4"/>
-    <div class="flex flex-col items-center justify-center p-4 -mt-16">
-        <a href="#" class="block relative">
+    <div className="shadow-lg rounded-2xl w-80 bg-white dark:bg-gray-800">
+    <img alt="profil" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
+    <div className="flex flex-col items-center justify-center p-4 -mt-16">
+        <a href="#" className="block relative">
         <Image
-        height="64" width="64" src="/favicons/circle-avatar.png" alt="avatar" class="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"
+        height="64" width="64" src="/favicons/circle-avatar.png" alt="avatar" className="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"
       />
         </a>
-        <p class="text-gray-800 dark:text-white text-xl font-medium mt-2">
+        <p className="text-gray-800 dark:text-white text-xl font-medium mt-2">
             Husnain
         </p>
-        <p class="text-gray-400 text-xs mb-4"><br></br>
+        <p className="text-gray-400 text-xs mb-4"><br></br>
         <Image 
       alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"
       />
@@ -99,25 +99,25 @@ export default function IndexPage() {
       alt="Bravery" height="30" width="30" src="/assets/img/bravery.png"
       />
         </p>
-        <p class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200"><FontAwesomeIcon icon={faEnvelope}> </FontAwesomeIcon><a href="mailto:one@hussgb.dev">- one@hussgb.dev</a><br></br></p>
-     <p class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">JavaScript, HTML & Python developer. Actively learning React-JS.</p>
-        <div class="rounded-lg p-2 w-full mt-4">
-            <div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
-                <p class="flex flex-col">
+        <p className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200"><FontAwesomeIcon icon={faEnvelope}> </FontAwesomeIcon><a href="mailto:one@hussgb.dev">- one@hussgb.dev</a><br></br></p>
+     <p className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">JavaScript, HTML & Python developer. Actively learning React-JS.</p>
+        <div className="rounded-lg p-2 w-full mt-4">
+            <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
+                <p className="flex flex-col">
                     Contacts
-                    <span class="text-black dark:text-white font-bold">
+                    <span className="text-black dark:text-white font-bold">
                         54
                     </span>
                 </p>
-                <p class="flex flex-col">
+                <p className="flex flex-col">
                    Archived Projects
-                    <span class="text-black dark:text-white font-bold">
+                    <span className="text-black dark:text-white font-bold">
                         82
                     </span>
                 </p>
-                <p class="flex flex-col">
+                <p className="flex flex-col">
                     Projects
-                    <span class="text-black dark:text-white font-bold">
+                    <span className="text-black dark:text-white font-bold">
                         86
                     </span>
                 </p>
@@ -138,48 +138,48 @@ export default function IndexPage() {
   <section id="down-1">
   <center>
     
-<div class="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
-    <div class="w-1/3 bg-cover bg-landscape"><br></br><br></br>
+<div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
+    <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
     <Image
       style={{textAlign:"center"}}
       alt="Early verified bot developer" height="100" width="100" src="/assets/img/developer.png"
       />
     </div>
-    <div class="w-2/3 p-4">
-        <h1 class="font-bold text-2xl text-gray-400 dark:text-gray-100">
+    <div className="w-2/3 p-4">
+        <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
             Verified Bot Developer
         </h1>
-        <p class="mt-2 text-gray-600 text-sm">
+        <p className="mt-2 text-gray-600 text-sm">
             This badge represents Discord bot developers who&#x27;ve reached over 80+ servers in succession for their bots.
         </p>
-        <div class="flex item-center mt-2">
+        <div className="flex item-center mt-2">
         </div>
-        <div class="flex item-center justify-between mt-3">
-            <a href="https://top.gg/bot/582307283120291840"><button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+        <div className="flex item-center justify-between mt-3">
+            <a href="https://top.gg/bot/582307283120291840"><button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                 View Verified Discord Bot
             </button></a>
         </div>
     </div>
 </div>
 
-<div class="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
-    <div class="w-1/3 bg-cover bg-landscape"><br></br><br></br>
+<div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
+    <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
     <Image
       style={{textAlign:"center"}}
       alt="Arctic Code Vault Contributor" height="100" width="100" src="/assets/img/ArcticCodeVaultContributor.png"
       />
     </div>
-    <div class="w-2/3 p-4">
-        <h1 class="font-bold text-2xl text-gray-400 dark:text-gray-100">
+    <div className="w-2/3 p-4">
+        <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
           Arctic Code Vault Contributor
         </h1>
-        <p class="mt-2 text-gray-600 text-sm">
+        <p className="mt-2 text-gray-600 text-sm">
            "Preserving open source software for future generations" - GitHub
         </p>
-        <div class="flex item-center mt-2">
+        <div className="flex item-center mt-2">
         </div>
-        <div class="flex item-center justify-between mt-3">
-            <a href="https://archiveprogram.github.com/"><button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+        <div className="flex item-center justify-between mt-3">
+            <a href="https://archiveprogram.github.com/"><button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                 Visit the Archive Program
             </button></a>
         </div>

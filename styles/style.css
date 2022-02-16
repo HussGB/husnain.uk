@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 body {
-    background-color: #23272a;
+    background-color: #27323a;
   }
+
+  .bg-dark{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background: rgb(1,1,6);
+    background: linear-gradient(90deg, rgba(1,1,6,1) 0%, rgb(18, 8, 41) 47%, rgb(31, 24, 32) 100%);
+    padding-bottom:20px;
+    margin-bottom: 20px; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:#05144d;
+    }
 
   .back{
     background-position: center center;

@@ -17,7 +17,7 @@ function App({ Component, pageProps }) {
       <meta name="theme-color" content="#00008b" />
       
 
-      <title>HussGB</title>
+      <title>Husnain</title>
     </Head>
     
     <Component {...pageProps} />

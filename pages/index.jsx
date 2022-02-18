@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faEnvelope, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-const username = <h1>HussGB</h1>;
+const username = <h1>Husnain</h1>;
 
 export default function IndexPage() {
   const [open, setOpen] = useState(true)
@@ -80,7 +80,7 @@ export default function IndexPage() {
     <br></br>
 
 <center>
-    <div className="shadow-lg rounded-2xl w-80 bg-white dark:bg-gray-800">
+    <div className="shadow-lg rounded-2xl w-80 bg-dark dark:bg-gray-800">
     <Image height="150" width="400" alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
     <div className="flex flex-col items-center justify-center p-4 -mt-16">
         <a href="#" className="block relative">
@@ -127,7 +127,7 @@ export default function IndexPage() {
 </div>
 </center>
     
-  </div></section><br></br><br></br><br></br>
+  </div></section><br></br><br></br><br></br><br></br>
   <div className="text-center">
   <a className="text-4xl text-slate-300" href="#down-1">
   <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>
@@ -137,7 +137,7 @@ export default function IndexPage() {
   
   <section id="down-1">
   <center>
-    
+  <div className="flex flex-row flex item-center justify-center">     
 <div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
     <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
     <Image
@@ -161,7 +161,7 @@ export default function IndexPage() {
         </div>
     </div>
 </div>
-
+&nbsp;&nbsp;&nbsp;&nbsp;
 <div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
     <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
     <Image
@@ -185,8 +185,62 @@ export default function IndexPage() {
         </div>
     </div>
 </div>
+</div>
+  </center>
+  </section>
 
 
+  <section id="down-2">
+  <center>
+  <div className="flex flex-row flex item-center justify-center">     
+<div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
+    <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
+    <Image
+      style={{textAlign:"center"}}
+      alt="Early verified bot developer" height="100" width="100" src="/assets/img/WMPCadets.png"
+      />
+    </div>
+    <div className="w-2/3 p-4">
+        <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
+            WMP Cadets
+        </h1>
+        <p className="mt-2 text-gray-600 text-sm">
+          Currently enrolled into the cadets scheme, learning new skills on a weekly! As-well as participating positively in the community.
+        </p>
+        <div className="flex item-center mt-2">
+        </div>
+        <div className="flex item-center justify-between mt-3">
+            <a href="https://vpc.police.uk/"><button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+                Visit Volunteer Police Cadets Website
+            </button></a>
+        </div>
+    </div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
+    <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
+    <Image
+      style={{textAlign:"center"}}
+      alt="GitHub Developer Logo" height="100" width="100" src="/assets/img/GitHubDeveloper.jpeg"
+      />
+    </div>
+    <div className="w-2/3 p-4">
+        <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
+          GitHub Developer
+        </h1>
+        <p className="mt-2 text-gray-600 text-sm">
+        Enrolled into the GitHub Developer Program, allowing my application to integrate with their API.
+        </p>
+        <div className="flex item-center mt-2">
+        </div>
+        <div className="flex item-center justify-between mt-3">
+            <a href="https://developer.github.com/program/"><button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+                View GitHub Developer Program
+            </button></a>
+        </div>
+    </div>
+</div>
+</div>
   </center>
   </section>
 

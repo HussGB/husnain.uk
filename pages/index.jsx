@@ -90,7 +90,7 @@ export default function IndexPage() {
             RAF Air Cadet
         </h1>
         <p className="mt-2 text-gray-500 text-sm">
-        Recently joined RAF Air Cadets.. I think I'&#x27;m on a trial-period for now, why don't you join in the mean-time?
+        Recently joined RAF Air Cadets.. I think I&apos;m on a trial-period for now, why don&apos;t you join in the mean-time?
         </p>
         <div className="flex item-center mt-2">
         </div>

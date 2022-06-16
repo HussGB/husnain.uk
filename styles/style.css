@@ -28,7 +28,7 @@ body {
      background-position: center center;
      background-repeat: no-repeat;
      background: rgb(4, 4, 27);
-     background: linear-gradient(60deg, rgb(35, 35, 58) 30%, rgb(61, 30, 134) 47%, rgb(23, 20, 71) 70%);
+     background: linear-gradient(60deg, rgb(23, 20, 71) 0%, rgb(61, 30, 134) 47%, rgb(23, 20, 71) 0%);
      padding-bottom:20px;
      margin-bottom: 20px; 
      background-attachment: fixed;

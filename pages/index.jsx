@@ -21,7 +21,7 @@ export default function IndexPage() {
 
 <center>
     <div className="shadow-lg rounded-2xl w-80 bg-dark dark:bg-gray-800">
-    <Image height="150" width="400" alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4 blur"/>
+    <Image height="150" width="400" alt="profilebg" src="/assets/img/bg-img1.jpg" className="rounded-t-lg h-28 w-full mb-4"/>
     <div className="flex flex-col items-center justify-center p-4 -mt-16">
         <a href="#" className="block relative">
         <Image
@@ -44,21 +44,21 @@ export default function IndexPage() {
         <div className="rounded-lg p-2 w-full mt-4">
             <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
                 <p className="flex flex-col">
-                    Occupation
+                    Contacts
                     <span className="text-black dark:text-white font-bold">
-                        Student
+                        54
                     </span>
                 </p>
                 <p className="flex flex-col">
-                   Developer Type
+                   Archived Projects
                     <span className="text-black dark:text-white font-bold">
-                        Full Stack
+                        82
                     </span>
                 </p>
                 <p className="flex flex-col">
-                    Country
+                    Projects
                     <span className="text-black dark:text-white font-bold">
-                        UK
+                        86
                     </span>
                 </p>
             </div>
@@ -77,31 +77,6 @@ export default function IndexPage() {
   
   <section id="down-1">
   <center>
-
-  <div className="bg-dark-new flex max-w-md shadow-lg rounded-lg overflow-hidden">
-    <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>
-    <Image
-      style={{textAlign:"center"}}
-      alt="RAF Air Cadet" height="100" width="100" src="/assets/img/rafatc.png"
-      />
-    </div>
-    <div className="w-2/3 p-4">
-        <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
-            RAF Air Cadet
-        </h1>
-        <p className="mt-2 text-gray-500 text-sm">
-        Recently joined RAF Air Cadets.. I think I'&#x27;m on a trial-period for now, why don't you join in the mean-time?
-        </p>
-        <div className="flex item-center mt-2">
-        </div>
-        <div className="flex item-center justify-between mt-3">
-            <a href="https://www.raf.mod.uk/aircadets/"><button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
-                Learn More
-            </button></a>
-        </div>
-    </div>
-</div>
-
   <div className="flex flex-row flex item-center justify-center">     
 <div className="bg-dark flex max-w-md shadow-lg rounded-lg overflow-hidden">
     <div className="w-1/3 bg-cover bg-landscape"><br></br><br></br>

@@ -87,7 +87,7 @@ export default function IndexPage() {
     </div>
     <div className="w-2/3 p-4">
         <h1 className="font-bold text-2xl text-gray-400 dark:text-gray-100">
-            RAF Air Cadet
+            RAF Air Cadets
         </h1>
         <p className="mt-2 text-gray-500 text-sm">
         Recently joined RAF Air Cadets.. I think I&apos;m on a trial-period for now, why don&apos;t you join in the mean-time?

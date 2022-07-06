@@ -50,7 +50,8 @@ export default function AchievementsPage() {
                       </div>
                     </div>
                    </div>
-                   
+
+                   &nbsp;&nbsp;&nbsp;&nbsp;
                    
                    <div className="column">
                     <div className="col-xs-12 col-sm-6">
@@ -82,6 +83,7 @@ export default function AchievementsPage() {
                     </div>
                    </div>
 
+                   &nbsp;&nbsp;&nbsp;&nbsp;
 
                    <div className="column">
                     <div className="col-xs-12 col-sm-6">
@@ -112,9 +114,8 @@ export default function AchievementsPage() {
                       </div>
                     </div>
                    </div>
-
-                    
-                    </div>
+                   
+                   </div>
                     
                     <center>
                         <p className="text-4xl text-slate-200 font-bold m-2">
@@ -156,6 +157,7 @@ Add Bot
   </div>
  </div>
  
+ &nbsp;&nbsp;&nbsp;&nbsp;
  
  <div className="column">
   <div className="col-xs-12 col-sm-6">
@@ -187,6 +189,7 @@ Add Bot
   </div>
  </div>
 
+ &nbsp;&nbsp;&nbsp;&nbsp;
 
  <div className="column">
   <div className="col-xs-12 col-sm-6">

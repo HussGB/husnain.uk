@@ -28,7 +28,7 @@ export default function AchievementsPage() {
             RAF Air Cadets
         </h1>
         <p className="mt-2 text-gray-500 text-sm">
-        Recently joined RAF Air Cadets.. I think I&apos;m on a trial-period for now, why don&apos;t you join in the mean-time?
+        The Air Training Corps, also known as ATC, is a community-based, British volunteer-military youth organisation. Founded on 5 February 1941.
         </p>
         <div className="flex item-center mt-2">
         </div>
@@ -37,6 +37,9 @@ export default function AchievementsPage() {
                 Learn More
             </button></a>
         </div>
+        <div className="certi-company">
+                            <span>Enrolment Date: 22/09/2022</span>
+                          </div>
     </div>
 </div>
 
@@ -54,7 +57,7 @@ export default function AchievementsPage() {
             WMP Cadets
         </h1>
         <p className="mt-2 text-gray-600 text-sm">
-          Currently enrolled into the cadets scheme, learning new skills on a weekly! As-well as participating positively in the community.
+          1 years experience in the WMP Cadets, contributing exceptionally in the community.
         </p>
         <div className="flex item-center mt-2">
         </div>
@@ -63,6 +66,9 @@ export default function AchievementsPage() {
                 Visit Volunteer Police Cadets Website
             </button></a>
         </div>
+        <div className="certi-company">
+                            <span>Served: 2021-2022</span>
+                          </div>
     </div>
 </div>
 </div>

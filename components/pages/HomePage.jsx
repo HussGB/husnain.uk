@@ -9,7 +9,7 @@ export default function HomePage() {
         <br></br>
         <br></br>
         <div className="shadow-lg rounded-2xl w-100 bg-dark dark:bg-gray-800">
-        <div class="badge badge-top-right"/>
+        <div className="badge badge-top-right"/>
         <div className="positioningHeader">
             <Image
             height="85" width="85" src="/favicons/circle-avatar.png" alt="avatar" className="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"

@@ -36,14 +36,58 @@ body {
      background-color:#05144d;
      }
 
+  .positioningHeader{
+    position:relative; left:35px; top:2px;
+  }
+
+  .pulse:hover, .pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+ }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+   }
+ }
+
+ .pulse {
+  color:white;
+  position:initial;
+  top: 90px;
+  --hover: #ffffff9d;
+}
+
+ .welpThisGottaWork{
+ position:relative;
+ box-shadow: 0 0 0 2em transparent;
+ color:rgba(255, 255, 255, 0.454);
+ left:16%;
+ font-weight:150;
+ bottom:65px;
+ }
+
+
+
+ .headerBadge {
+  border: 2px solid;
+  font: inherit;
+  background-color:white;
+  color:white;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
   .back{
+    font: 300 1em 'Fira Sans', sans-serif;
+    font-weight: 400;
     background-position: center center;
     background-repeat: no-repeat;
     background: rgb(1,1,6);
     background: linear-gradient(90deg, rgba(1,1,6,1) 0%, rgba(56,28,116,1) 47%, rgba(126,0,145,1) 100%);
     padding-bottom:20px;
     margin-bottom: 20px; 
-    height: 400px;
+    height: 250px;
     background-attachment: fixed;
     background-size: cover;
     background-color:#05144d;

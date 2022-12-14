@@ -15,7 +15,7 @@ export default {
         locale: 'en_GB',
         title: 'Husnain',
         description: 'Hi, I\'m Husnain! A full-stack developer with years of experience. Welcome to my portfolio website.',
-        site_name: "Triassic's Website",
+        site_name: "HussGBs Website!",
         images: [
             {
                 url: "/favicons/circle-avatar.png",

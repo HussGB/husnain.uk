@@ -63,10 +63,13 @@ body {
  color:rgba(255, 255, 255, 0.454);
  left:16%;
  font-weight:150;
- bottom:65px;
+ bottom:30px;
  }
 
-
+.whitebruv{
+  position:relative;
+  color:aliceblue;
+}
 
  .headerBadge {
   border: 2px solid;

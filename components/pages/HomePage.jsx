@@ -13,15 +13,13 @@ export default function HomePage() {
         <div className="positioningHeader">
             <Image
             height="85" width="85" src="/favicons/circle-avatar.png" alt="avatar" className="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"
-          /><headerBadge className="pulse">🇬🇧</headerBadge><div className="welpThisGottaWork"><FontAwesomeIcon icon={faCircle}></FontAwesomeIcon> - SITE IS ACTIVELY BEING REDESIGNED!!!<br/>- 14/10/22 - PRESENT</div>
+          /><headerBadge className="pulse">🇬🇧</headerBadge><div className="welpThisGottaWork"><Image alt="Discord Bravery" height="30" width="30" src="/assets/img/braveryy.png"/><Image alt="Active Developer" height="30" width="30" src="/assets/img/activdev.png"/><Image alt="Verified Bot Developer" height="30" width="30" src="/assets/img/vfbotdev.gif"/><Image alt="Nitro Classic" height="30" width="30" src="/assets/img/nitro-classic.gif"/></div>
             <p className="text-gray-800 dark:text-white text-xl font-medium mt-2">
                 <b>Husnain</b>
             </p>
            <p className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">Aged 15 years, born in the United Kingdom. Known virtually as a HTML<br/>& JavaScript (frontend/backend) developer. Welcome to my website!</p>
             <div className="rounded-lg p-2 w-full mt-4">
-            <Image 
-      alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"
-      />
+            <Image alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"/>
       <Image 
       alt="Bravery" height="30" width="30" src="/assets/img/bravery.png"
       />

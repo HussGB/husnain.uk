@@ -29,6 +29,7 @@ export default function HomePage() {
             </div>
             </div>
         </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6734476030952556"></script>
         </section>
     )
 }  

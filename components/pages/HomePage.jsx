@@ -17,7 +17,7 @@ export default function HomePage() {
             <p className="text-gray-800 dark:text-white text-xl font-medium mt-2">
                 <b>Husnain</b>
             </p>
-           <p className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">Aged 15 years, born in the United Kingdom. Known virtually as a HTML<br/>& JavaScript (frontend/backend) developer. Welcome to my website!</p>
+           <p className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">Aged 16 years, born in the United Kingdom. Known virtually as a HTML<br/>& JavaScript (frontend/backend) developer. Welcome to my website!</p>
             <div className="rounded-lg p-2 w-full mt-4">
             <Image alt="Early verified bot developer" height="30" width="30" src="/assets/img/developer.png"/>
       <Image 

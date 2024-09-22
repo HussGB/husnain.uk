@@ -2,7 +2,7 @@
 
 I have made my website with NextJS React which is open-sourced so that fellow starter developers could get a grip on React. This is my first project where I've actually used my practicing skills of React on and I hope it satisfies the end-viewer.
 
-You could view this production at https://hussgb.dev
+You could view this production at https://husnain.uk
 
 # Installation of this project
 

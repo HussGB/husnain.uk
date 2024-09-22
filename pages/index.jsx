@@ -7,10 +7,7 @@ import KoFiWidget from '../components/ko-fi-widget.jsx'
 export default function IndexPage() {
   return (
     <>
-    <LoginBtn />
       <HomePage />
-      <ProjectsPage />
-      <ContactPage />
       <KoFiWidget />
     </>
   )

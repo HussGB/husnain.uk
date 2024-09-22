@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +47,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative flex flex-col items-center justify-center bg-white-900 text-white py-20">
+      <div id="home" className="relative flex flex-col items-center justify-center bg-white-900 text-white py-20">
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate__animated animate__fadeIn">Husnain</h1>
           <p className="mt-4 text-lg md:text-2xl text-gray-400 animate__animated animate__fadeIn animate__delay-1s">Developer | Student | Human</p>
@@ -151,7 +152,6 @@ export default function HomePage() {
                 aria-controls="falix-nodes-content"
               >
                 <div className="flex items-center">
-                  <FontAwesomeIcon icon={faMoon} className="text-blue-500 mr-2" />
                   <h4 className="text-lg font-semibold">FalixNodes</h4>
                 </div>
                 <FontAwesomeIcon icon={faChevronDown} className={`transition-transform duration-300 ${isFalixNodesOpen ? 'transform rotate-180' : ''}`} />
@@ -163,8 +163,7 @@ export default function HomePage() {
           {isIdleDevelopmentOpen && (
             <div id="idle-development-content" className="mt-4 p-4 bg-gray-50 rounded-lg">
               <p>
-                Explore the innovative features of the Idle Development project, where creativity meets technology.
-              </p>
+              <b>Idle Development..</b> - the memories! This was a team that originated of <b>four intelligent developers</b> including myself which later consisted of a <b>fifth</b> developer during the reign of Idley Host. The goal of this team was to make your online entertainment be worth the time. And we succeeded! However as all good things come to an end and as everyone eventually latches onto new hobbies and interests the team decided it was best to go down different pathways and continue in our unique ways. Below is a list of the Idle Developments legacy projects which I have been part of: </p><br/>
               <div className="flex flex-wrap justify-center">
               <div className="w-full md:w-5/12 lg:w-4/12 p-2 aos-init aos-animate">
               <div className="bg-white shadow-lg p-6 rounded-lg mb-6">
@@ -230,8 +229,8 @@ export default function HomePage() {
           {isFalixNodesOpen && (
             <div id="falix-nodes-content" className="mt-4 p-4 bg-gray-50 rounded-lg">
               <p>
-                Discover the powerful tools and services provided by FalixNodes, designed for developers.
-              </p>
+                My contributions to Falix from 2018 - 2021
+              </p><br/>
               <div className="flex flex-wrap">
               <div className="w-full md:w-5/12 lg:w-4/12 p-2 aos-init aos-animate">
               <div className="bg-white shadow-lg p-6 rounded-lg mb-6">
@@ -365,12 +364,33 @@ export default function HomePage() {
       </div>
 
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto text-center">
-          <p className="mb-4">© 2024 Husnain. All rights reserved.</p>
-        </div>
-      </footer>
+       {/* Footer Section */}
+       <footer className="bg-transparent text-gray-100 py-12">
+  <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <div className="mb-6 md:mb-0">
+      <Link href="/">
+        <a className="text-white text-lg font-bold">HUSNAIN.UK</a>
+      </Link>
+    </div>
+    <div className="space-x-4 mb-6 md:mb-0">
+      <Link href="#about">
+        <a className="hover:text-gray-400 transition-colors">About</a>
+      </Link>
+      <Link href="#projects">
+        <a className="hover:text-gray-400 transition-colors">Services</a>
+      </Link>
+      <Link href="#skills">
+        <a className="hover:text-gray-400 transition-colors">Skills</a>
+      </Link>
+      <Link href="#contact">
+        <a className="hover:text-gray-400 transition-colors">Contact</a>
+      </Link>
+    </div>
+    <div>
+      <p className="text-sm">&copy; {new Date().getFullYear()} Mohammed Husnain.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

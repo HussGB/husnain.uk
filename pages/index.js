@@ -5,6 +5,7 @@ import { SiNextdotjs, SiTailwindcss, SiJavascript } from "react-icons/si";
 export default function Home() {
 
     const [isOpen, setIsOpen] = useState(false);
+  const [mobileHeroOpen, setMobileHeroOpen] = useState(false);
 
   const sections = ["about", "skills", "projects", "experience", "testimonials", "contact"];
 

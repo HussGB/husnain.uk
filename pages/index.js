@@ -333,7 +333,7 @@ export default function Home() {
     {/* Social Links */}
     <div className="flex justify-center gap-8 text-gray-600">
       <a
-        href="https://github.com/husnainuk"
+        href="https://github.com/hussgb"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-gray-800 transition"

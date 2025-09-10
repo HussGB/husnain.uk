@@ -93,7 +93,7 @@ export default function Home() {
       )}
     </nav>
 
-      {/* Hero Section */}
+{/* Hero Section */}
 <section className="relative h-[50vh] flex flex-col justify-center items-center text-center px-6">
   {/* Background image */}
   <div
@@ -102,17 +102,19 @@ export default function Home() {
   ></div>
 
   {/* Dark overlay / tint */}
-  <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.6)" }}></div>
+  <div className="absolute inset-0 bg-black/60"></div>
 
   {/* Hero content */}
-  <div className="relative z-10 flex flex-col items-center text-white">
-    <h2 className="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in">
+  <div className="relative z-10 flex flex-col items-center text-white space-y-4 md:space-y-6">
+    <h2 className="text-4xl md:text-6xl font-extrabold mb-2 md:mb-4 animate-fade-in">
       Mohammed Husnain
     </h2>
-    <p className="text-lg md:text-xl mb-6 animate-fade-in max-w-2xl text-center">
+    <p className="text-lg md:text-xl mb-4 md:mb-6 animate-fade-in max-w-2xl text-center">
       Experienced Full-Stack Developer & IT Specialist | Birmingham, UK
     </p>
-    <div className="flex space-x-4">
+
+    {/* Desktop buttons */}
+    <div className="hidden md:flex space-x-4">
       {["about", "skills", "projects", "experience", "testimonials", "contact"].map(
         (key) => (
           <button
@@ -125,9 +127,37 @@ export default function Home() {
         )
       )}
     </div>
+
+    {/* Mobile dropdown / toggle button */}
+    <div className="md:hidden relative">
+      <button
+        onClick={() => setMobileHeroOpen(!mobileHeroOpen)}
+        className="bg-accent hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded transition"
+      >
+        Menu
+      </button>
+
+      {mobileHeroOpen && (
+        <div className="absolute mt-2 w-48 bg-white text-gray-900 rounded shadow-lg flex flex-col z-50">
+          {["about", "skills", "projects", "experience", "testimonials", "contact"].map(
+            (key) => (
+              <button
+                key={key}
+                onClick={() => {
+                  setActiveSection(key);
+                  setMobileHeroOpen(false);
+                }}
+                className="px-4 py-2 text-left hover:bg-gray-200 transition"
+              >
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+              </button>
+            )
+          )}
+        </div>
+      )}
+    </div>
   </div>
 </section>
-
 
 {/* About Section */}
 <section id="about" className="py-24 px-6 bg-white relative">

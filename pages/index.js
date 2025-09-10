@@ -1,8 +1,14 @@
-import { useEffect } from "react";
-import { FaReact, FaNodeJs, FaDatabase, FaServer, FaGithub, FaLinkedin, FaCloud, FaUsers, FaLaptopCode  } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaReact, FaNodeJs, FaBars, FaTimes, FaDatabase, FaServer, FaGithub, FaLinkedin, FaCloud, FaUsers, FaLaptopCode  } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiJavascript } from "react-icons/si";
 
 export default function Home() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+  const sections = ["about", "skills", "projects", "experience", "testimonials", "contact"];
+
+
   useEffect(() => {
     // Smooth scroll for navbar links
     const links = document.querySelectorAll("a[href^='#']");
@@ -20,50 +26,72 @@ export default function Home() {
 
 {/* Navbar */}
 <nav className="fixed w-full top-0 z-50 flex justify-between items-center px-6 md:px-0 py-4 bg-transparent">
-  {/* Left side rectangle behind name */}
-  <div className="relative flex items-center">
-  <div
-  className="absolute left-0 top-0 h-full bg-white"
-  style={{
-    width: "calc(100% + 2rem)", // safe expansion
-    maxWidth: "300px",          // don’t let it blow up on small screens
-    paddingLeft: "2rem",
-    paddingRight: "1rem",
-    zIndex: -1,
-  }}
-></div>
-    <h1 className="relative text-2xl font-bold text-gray-900 pl-4">
-      Mohammed Husnain
-    </h1>
-  </div>
+      
+      {/* Left side rectangle behind name */}
+      <div className="relative flex items-center">
+        <div
+          className="absolute left-0 top-0 h-full bg-white"
+          style={{
+            width: "calc(100% + 2rem)",
+            maxWidth: "300px",
+            paddingLeft: "2rem",
+            paddingRight: "1rem",
+            zIndex: -1,
+          }}
+        ></div>
+        <h1 className="relative text-2xl font-bold text-gray-900 pl-4">
+          Mohammed Husnain
+        </h1>
+      </div>
 
-  {/* Right side nav links with individual rectangles */}
- <div className="flex space-x-4 md:space-x-6 text-sm md:text-lg font-medium relative">
-  {["about", "skills", "projects", "experience", "testimonials", "contact"].map((section) => (
-    <a
-      key={section}
-      href={`#${section}`}
-      className="relative text-gray-900 hover:text-indigo-500 transition-colors duration-300 font-semibold"
-    >
-      {/* Background rectangle slightly bigger than text */}
-      <div
-        className="absolute bg-white"
-        style={{
-          top: '-0.25rem',      // space above the text
-          bottom: '-0.25rem',   // space below the text
-          left: '-1.5rem',      // space left of text
-          right: '-0.5rem',     // space right of text
-          zIndex: -1,
-        }}
-      ></div>
-      <span className="relative px-3 py-2 text-base md:text-lg">{section.charAt(0).toUpperCase() + section.slice(1)}</span>
-    </a>
-  ))}
-</div>
+      {/* Desktop nav links */}
+      <div className="hidden md:flex space-x-4 md:space-x-6 text-sm md:text-lg font-medium relative">
+        {sections.map((section) => (
+          <a
+            key={section}
+            href={`#${section}`}
+            className="relative text-gray-900 hover:text-indigo-500 transition-colors duration-300 font-semibold"
+          >
+            <div
+              className="absolute bg-white"
+              style={{
+                top: "-0.25rem",
+                bottom: "-0.25rem",
+                left: "-1.5rem",
+                right: "-0.5rem",
+                zIndex: -1,
+              }}
+            ></div>
+            <span className="relative px-3 py-2 text-base md:text-lg">
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </span>
+          </a>
+        ))}
+      </div>
 
+      {/* Mobile menu button */}
+      <div className="md:hidden">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-900 focus:outline-none">
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
 
-</nav>
-
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-gray-50 shadow-lg rounded-md flex flex-col z-50">
+          {sections.map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className="px-4 py-2 text-gray-900 hover:bg-gray-200 transition font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
 
       {/* Hero Section */}
 <section className="relative h-[50vh] flex flex-col justify-center items-center text-center px-6">

@@ -10,6 +10,7 @@
   "dependencies": {
     "@prisma/client": "^6.16.0",
     "autoprefixer": "^10.4.21",
+    "bcryptjs": "^3.0.2",
     "mysql2": "^3.14.5",
     "next": "15.5.2",
     "next-auth": "^4.24.11",

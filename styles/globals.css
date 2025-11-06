@@ -1,4 +1,7 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *)); 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +18,10 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: #0f172a;
+  --color-accent-soft: #e5e7eb;
+  --color-muted: #6b7280;
+  --radius-card: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {

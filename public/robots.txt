@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://husnain.uk/sitemap.xml
+Host: husnain.uk

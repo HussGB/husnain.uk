@@ -970,7 +970,7 @@ if (!mounted) return null; // Prevents hydration mismatch
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 italic leading-relaxed">
               Please note: this email address is provided for genuine inquiries only. 
               I do not wish to receive marketing, promotional, or unsolicited messages. 
-              Violators may be permanently blocked.
+              Violators may be subject to legal action.
             </p>
           </div>
 

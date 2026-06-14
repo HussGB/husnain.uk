@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import LegalHeader from "@/components/LegalHeader";
+import { contactLinks } from "@/data/contactLinks";
 
 export default function LegalIndex() {
   const policies = [

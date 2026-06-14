@@ -15,11 +15,16 @@ import {
   FaGithub,
   FaLinkedin,
   FaCloud,
+  FaGitHubSquare,
+  FaShieldAlt,
   FaDiscord,
+  FaInstagram,
   FaLaptopCode,
 } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { FiSun, FiMoon } from "react-icons/fi";
+import { contactLinks } from "../data/contactLinks.js";
+
 
 export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
@@ -35,6 +40,15 @@ const [theme, setTheme] = useState(() => {
   }
   return "dark";
 });
+
+const isDark = theme === "dark";
+
+const getIconColor = (item, theme) => {
+  if (item.name === "GitHub") {
+    return theme === "dark" ? "#e5e7eb" : "#0f172a";
+  }
+  return item.color;
+};
 
   const [info, setInfo] = useState({
     headline: "Full-stack developer & Cybersecurity student",
@@ -138,7 +152,7 @@ if (!mounted) return null; // Prevents hydration mismatch
         url: "https://www.raf.mod.uk/aircadets/"
       },
       description:
-        "Mohammed Husnain — Full-stack developer, cybersecurity student, and Sales Consultant at Next Retail. Building secure and performant digital systems through Husnain.UK.",
+        "Mohammed Husnain - Full-stack developer, cybersecurity student, and Sales Consultant at Next Retail. Building secure and performant digital systems through Husnain.UK.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Birmingham",
@@ -156,7 +170,7 @@ if (!mounted) return null; // Prevents hydration mismatch
 />
 
 
-  <title>Mohammed Husnain — Full-Stack Developer & Cybersecurity Student</title>
+  <title>Mohammed Husnain - Full-Stack Developer & Cybersecurity Student</title>
   <meta
     name="description"
     content="Official portfolio of Mohammed Husnain (aka HussGB), a full-stack developer and cybersecurity student based in Birmingham, UK. Building dashboards, client portals, and secure web systems under Husnain.UK."
@@ -171,7 +185,7 @@ if (!mounted) return null; // Prevents hydration mismatch
   {/* Open Graph / Social preview */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://husnain.uk/" />
-  <meta property="og:title" content="Mohammed Husnain — Full-Stack Developer & Cybersecurity Student" />
+  <meta property="og:title" content="Mohammed Husnain - Full-Stack Developer & Cybersecurity Student" />
   <meta
     property="og:description"
     content="Full-stack developer & cybersecurity student from Birmingham, UK. Creator of Husnain.UK and former co-founder of Idle Development."
@@ -180,7 +194,7 @@ if (!mounted) return null; // Prevents hydration mismatch
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohammed Husnain — Full-Stack Developer & Cybersecurity Student" />
+  <meta name="twitter:title" content="Mohammed Husnain - Full-Stack Developer & Cybersecurity Student" />
   <meta
     name="twitter:description"
     content="Building secure, high-performance websites and applications with Next.js, TailwindCSS, and Node.js."
@@ -293,12 +307,7 @@ if (!mounted) return null; // Prevents hydration mismatch
           <div className="max-w-6xl mx-auto grid md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-10 items-center">
             {/* Left: intro */}
             <div className="space-y-6">
-              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                Available for opportunities
-              </p>
-
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
   Mohammed Husnain{" "}
   <span className="block text-slate-500 dark:text-slate-400 text-lg font-normal mt-1">
     (also known online as <span className="font-medium text-slate-800 dark:text-slate-200">HussGB</span>)
@@ -339,6 +348,10 @@ if (!mounted) return null; // Prevents hydration mismatch
                   <span className="h-1.5 w-1.5 rounded-full bg-slate-500" />
                   Full-Stack · Cybersecurity
                 </div>
+                <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                Available for opportunities
+              </p>
               </div>
             </div>
 
@@ -493,7 +506,7 @@ if (!mounted) return null; // Prevents hydration mismatch
                 },
                 {
                   title: "Hosting & Maintenance",
-                  desc: "Managed VPS hosting, updates, and ongoing support — so your site stays fast, reliable, and stress-free.",
+                  desc: "Managed VPS hosting, updates, and ongoing support - so your site stays fast, reliable, and stress-free.",
                   icon: <FaCloud />,
                 },
               ].map((s) => (
@@ -599,13 +612,13 @@ if (!mounted) return null; // Prevents hydration mismatch
             <div className="grid gap-6 md:grid-cols-3">
               {[
                 {
-                  title: "Cyper Billing",
-                  desc: "Full-stack billing panel with PayPal integration and telemetry designed for a SaaS-like experience.",
-                  img: "/CyperBilling.png",
-                  tags: ["Next.js", "Node.js", "Payments"],
+                  title: "Plumb-On Services Limited Website Revamp",
+                  desc: "Modern service website redesign focused on lead generation, service clarity, and trust-building. Includes booking flows, service pages, customer enquiry system, and mobile-first UX optimisation.",
+                  img: "/PlumbOn.png",
+                  tags: ["UX/UI", "Lead Gen", "SEO", "Responsive", "Conversion"]
                 },
                 {
-                  title: "Client / Tenant Portal",
+                  title: "Client / Tenant Portal (Unreleased)",
                   desc: "Multi-role portal with dashboards, order views, and admin capabilities for managing users and services.",
                   img: "/TenancyPortal.jpg",
                   tags: ["Dashboards", "Auth", "UX"],
@@ -679,29 +692,12 @@ if (!mounted) return null; // Prevents hydration mismatch
           <p>
             With collaborators like <strong>Triassic (Daniel)</strong>, <strong>Floffah</strong>,
             and <strong>Shane (Reverso)</strong>, I co-founded projects that helped me mature
-            technically and professionally — from <strong>Idle Development</strong> to
-            <strong> Idley Host</strong> — while also gaining people skills through my
+            technically and professionally - from <strong>Idle Development</strong> to
+            <strong> Idley Host</strong> - while also gaining people skills through my
             <strong> Sales Consultant</strong> role at Next Retail.
           </p>
         </div>
 
-        {/* VIEW FULL TIMELINE TOGGLE */}
-        <div className="flex justify-center">
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-300 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-          >
-            {expanded ? (
-              <>
-                <FaChevronUp className="h-4 w-4" /> Hide full timeline
-              </>
-            ) : (
-              <>
-                <FaChevronDown className="h-4 w-4" /> View full timeline
-              </>
-            )}
-          </button>
-        </div>
 
         {/* TIMELINE */}
         <div
@@ -718,14 +714,14 @@ if (!mounted) return null; // Prevents hydration mismatch
             <div className="rounded-lg border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 p-5 shadow-sm">
               <div className="flex items-center justify-between">
                 <p className="font-medium text-slate-900 dark:text-slate-50">
-                  Sales Consultant — Next Retail
+                  Sales Consultant - Next Retail
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">2024 – <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">PRESENT</span></p>
               </div>
               <p className="mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                 Customer-facing retail experience involving <strong>problem-solving, teamwork</strong>,
                 and <strong>communication</strong>. Developed strong adaptability, professional conduct,
-                and sales accuracy in a high-volume environment — skills that translate directly into
+                and sales accuracy in a high-volume environment - skills that translate directly into
                 project management and client-facing development work.
               </p>
             </div>
@@ -765,7 +761,7 @@ if (!mounted) return null; // Prevents hydration mismatch
               <p className="mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                 Actively building SaaS dashboards, portals, and systems under my brand{" "}
                 <strong>Husnain.UK</strong> while pursuing a degree in{" "}
-                <strong>Cybersecurity</strong> — focusing on security, performance, and clean UX.
+                <strong>Cybersecurity</strong> - focusing on security, performance, and clean UX.
               </p>
             </div>
           </div>
@@ -876,11 +872,29 @@ if (!mounted) return null; // Prevents hydration mismatch
               </div>
               <p className="mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                 My very first Discord bot, co-founded with <strong>Savitar50</strong> and guided by
-                <strong> Swiftingly</strong>. This was the foundation of everything that followed —
+                <strong> Swiftingly</strong>. This was the foundation of everything that followed -
                 teaching me APIs, teamwork, and the thrill of creation.
               </p>
             </div>
           </div>
+          
+        </div>
+          {/* VIEW FULL TIMELINE TOGGLE */}
+        <div className="flex justify-center">
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-300 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+          >
+            {expanded ? (
+              <>
+                <FaChevronUp className="h-4 w-4" /> Hide full timeline
+              </>
+            ) : (
+              <>
+                <FaChevronDown className="h-4 w-4" /> View full timeline
+              </>
+            )}
+          </button>
         </div>
       </div>
     </section>
@@ -902,125 +916,185 @@ if (!mounted) return null; // Prevents hydration mismatch
           </h2>
           <p className="mt-3 text-slate-600 dark:text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
             I’m open to new opportunities, collaborations, or just chatting about tech.
-            Reach out via email, Discord, or LinkedIn — quick responses guaranteed.
+            Reach out via email, Discord, or LinkedIn - quick responses guaranteed.
           </p>
         </div>
 
         {/* Contact Cards */}
         <div className="grid sm:grid-cols-2 gap-6 text-left">
-          {/* EMAIL CARD */}
-          <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm hover:shadow-md transition">
-            <h3 className="font-medium text-slate-900 dark:text-slate-50 flex items-center gap-2">
-              <FaEnvelope className="text-slate-700 dark:text-slate-300" />
-              Email
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
-              Protected with verification
-            </p>
+         {/* SEO / AI CRAWLER CONTACT DATA (always visible in DOM) */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Husnain",
+      url: "https://husnain.uk",
+      email: "contact@husnain.uk",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "contact@husnain.uk",
+        availableLanguage: ["English"],
+      },
+    }),
+  }}
+/>
 
-            {!verified ? (
-              <form
-                onSubmit={handleVerify}
-                className="mt-4 flex flex-col sm:flex-row gap-2 text-sm"
-              >
-                <input
-                  type="text"
-                  name="verification"
-                  placeholder="Type 'human' to unlock"
-                  className="flex-1 border border-slate-300 dark:border-slate-700 rounded-md p-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400/40"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-slate-900 text-white dark:bg-slate-50 dark:text-slate-950 rounded-md hover:bg-slate-700 dark:hover:bg-slate-200 transition"
-                >
-                  Verify
-                </button>
-              </form>
-            ) : (
-              <div className="mt-4 flex flex-col sm:flex-row gap-2 items-center transition-all duration-300">
-                <a
-                  href="mailto:contact@husnain.uk"
-                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-                >
-                  <FaEnvelope />
-                  contact@husnain.uk
-                </a>
-                <button
-                  onClick={handleCopy}
-                  className="flex items-center gap-2 text-sm px-3 py-2 rounded-md border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-                >
-                  {copied ? (
-                    <>
-                      <FaCheck className="text-emerald-500" />
-                      <span>Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <FaCopy />
-                      <span>Copy</span>
-                    </>
-                  )}
-                </button>
-              </div>
-            )}
-            {error && (
-              <p className="text-xs text-red-500 mt-2 transition-all">{error}</p>
-            )}
-{/* Anti-spam disclaimer */}
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 italic leading-relaxed">
-              Please note: this email address is provided for genuine inquiries only. 
-              I do not wish to receive marketing, promotional, or unsolicited messages. 
-              Violators may be subject to legal action.
-            </p>
-          </div>
+{/* EMAIL CARD */}
+<div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm hover:shadow-md transition">
 
-          {/* DISCORD CARD */}
-          <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm hover:shadow-md transition">
-            <h3 className="font-medium text-slate-900 dark:text-slate-50 flex items-center gap-2">
-              <FaDiscord className="text-[#5865F2]" />
-              Discord
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
-              <span className="font-mono text-slate-800 dark:text-slate-200">
-                hussgb
-              </span>
-            </p>
-            <a
-              href="https://discord.com/users/hussgb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm mt-3 font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+  <h3 className="font-medium text-slate-900 dark:text-slate-50 flex items-center gap-2">
+    <FaEnvelope className="text-slate-700 dark:text-slate-300" />
+    Email
+  </h3>
+
+  <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
+    Protected with verification
+  </p>
+
+  {/*  CRAWLER-VISIBLE CONTACT */}
+  <noscript>
+    <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">
+      Contact: contact@husnain.uk
+    </p>
+  </noscript>
+
+  {/* DOM PRESENCE FOR SEO */}
+  <span className="sr-only">
+    Primary contact email: contact@husnain.uk
+  </span>
+
+  {!verified ? (
+    <form
+      onSubmit={handleVerify}
+      className="mt-4 flex flex-col sm:flex-row gap-2 text-sm"
+    >
+      <input
+        type="text"
+        name="verification"
+        placeholder="Type 'human' to unlock"
+        className="flex-1 border border-slate-300 dark:border-slate-700 rounded-md p-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400/40"
+      />
+      <button
+        type="submit"
+        className="px-4 py-2 bg-slate-900 text-white dark:bg-slate-50 dark:text-slate-950 rounded-md hover:bg-slate-700 dark:hover:bg-slate-200 transition"
+      >
+        Verify
+      </button>
+    </form>
+  ) : (
+    <div className="mt-4 flex flex-col sm:flex-row gap-2 items-center transition-all duration-300">
+      <a
+        href="mailto:contact@husnain.uk"
+        className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+      >
+        <FaEnvelope />
+        contact@husnain.uk
+      </a>
+
+      <button
+        onClick={handleCopy}
+        className="flex items-center gap-2 text-sm px-3 py-2 rounded-md border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+      >
+        {copied ? (
+          <>
+            <FaCheck className="text-emerald-500" />
+            <span>Copied!</span>
+          </>
+        ) : (
+          <>
+            <FaCopy />
+            <span>Copy</span>
+          </>
+        )}
+      </button>
+    </div>
+  )}
+
+  {error && (
+    <p className="text-xs text-red-500 mt-2 transition-all">{error}</p>
+  )}
+
+  <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 italic leading-relaxed">
+    Please note: this email address is provided for genuine inquiries only. I do not wish to receive marketing, promotional, or unsolicited messages.
+  </p>
+</div>
+
+{/* CONTACT HUB */}
+<div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm hover:shadow-lg transition">
+
+  <h3 className="font-medium text-slate-900 dark:text-slate-50">
+    Contact & Socials
+  </h3>
+
+  <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
+    Connect with me across platforms
+  </p>
+
+  {/* LINKS */}
+  <div className="mt-4 space-y-3">
+
+    {contactLinks.map((item) => {
+      const Icon = item.icon;
+      const iconColor = getIconColor(item, theme);
+
+      return (
+        <a
+          key={item.name}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-between gap-3 p-3 rounded-lg border border-slate-200 dark:border-slate-800
+                     hover:bg-slate-50 dark:hover:bg-slate-800/40
+                     hover:-translate-y-[2px]
+                     transition-all duration-200"
+        >
+          {/* LEFT */}
+          <div className="flex items-center gap-3">
+
+            {/* ICON WITH GLOW */}
+            <div
+              className="relative flex items-center justify-center"
+              style={{
+                filter: `drop-shadow(0 0 0px ${iconColor})`,
+              }}
             >
-              <FaDiscord />
-              Message me on Discord
-            </a>
+              <Icon
+                className="text-lg transition-all duration-300 group-hover:scale-110"
+                style={{ color: iconColor }}
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
+                {item.name}
+              </span>
+              <span className="text-xs font-mono text-slate-600 dark:text-slate-400">
+                {item.handle}
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 pt-8 text-slate-700 dark:text-slate-200">
-          <a
-            href="https://github.com/hussgb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-slate-900 dark:hover:text-white transition"
+          {/* CTA */}
+          <span
+            className="text-xs font-medium px-3 py-1.5 rounded-md border
+                       border-slate-300 dark:border-slate-700
+                       group-hover:bg-slate-100 dark:group-hover:bg-slate-800
+                       transition"
           >
-            <FaGithub />
-            <span>GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/husnainuk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-slate-900 dark:hover:text-white transition"
-          >
-            <FaLinkedin />
-            <span>LinkedIn</span>
-          </a>
-        </div>
+            {item.action}
+          </span>
+        </a>
+      );
+    })}
+  </div>
+</div>
 
+        </div>
         <p className="text-xs text-slate-500 dark:text-slate-400">
-          🛡️ This section includes static verification to prevent automated spam.
+         <FaShieldAlt className="inline-block mr-1" /> This section includes static verification to prevent automated spam.
         </p>
       </div>
     </section>
@@ -1112,7 +1186,7 @@ if (!mounted) return null; // Prevents hydration mismatch
   {/* Disclaimer line */}
   <div className="mt-4 text-center text-[11px] text-slate-500 dark:text-slate-500 px-4 max-w-4xl mx-auto">
     <p>
-      This site is still under active development. No liability shall be taken for any losses caused interacting on this website. Please avoid unsolicited or spam messages — contact 
+      This site is still under active development. No liability shall be taken for any losses caused interacting on this website. Please avoid unsolicited or spam messages - contact 
       via verified channels only.
     </p>
   </div>

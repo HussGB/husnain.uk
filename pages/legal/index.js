@@ -35,6 +35,11 @@ export default function LegalIndex() {
       desc: "Acknowledgements for the technologies and frameworks powering this website.",
       href: "/legal/open-source",
     },
+    {
+      title: "Customer Services Terms",
+      desc: "Terms for website development, hosting, maintenance, consultations, and security work.",
+      href: "/legal/customer-services",
+    },
   ];
 
   const jsonLd = {
@@ -42,11 +47,11 @@ export default function LegalIndex() {
     "@type": "CollectionPage",
     name: "Legal Policies | Husnain.UK",
     description: "Legal, privacy, and compliance information for Husnain.UK.",
-    url: "https://husnain.uk/legal",
+    url: "https://www.husnain.uk/legal",
     hasPart: policies.map((p) => ({
       "@type": "WebPage",
       name: p.title,
-      url: `https://husnain.uk${p.href}`,
+      url: `https://www.husnain.uk${p.href}`,
     })),
     about: {
       "@type": "Person",

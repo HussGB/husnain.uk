@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /auth/
 
-Sitemap: https://husnain.uk/sitemap.xml
-Host: husnain.uk
+Sitemap: https://www.husnain.uk/sitemap.xml

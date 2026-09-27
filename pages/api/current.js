@@ -4,12 +4,21 @@ export default async function handler(req, res) {
   try {
     const username = "hussgb";
 
-    const [user, repos] = await Promise.all([
-      fetch(`https://api.github.com/users/${username}`).then(r => r.json()),
-      fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=3`).then(r => r.json())
+    const [userResponse, reposResponse] = await Promise.all([
+      fetch(`https://api.github.com/users/${username}`),
+      fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=3`)
     ]);
 
-    const latestRepos = repos.map(r => ({
+    if (!userResponse.ok || !reposResponse.ok) {
+      return res.status(502).json({ error: "GitHub is temporarily unavailable" });
+    }
+
+    const [user, repos] = await Promise.all([
+      userResponse.json(),
+      reposResponse.json(),
+    ]);
+
+    const latestRepos = (Array.isArray(repos) ? repos : []).map(r => ({
       name: r.name,
       html_url: r.html_url,
       description: r.description,

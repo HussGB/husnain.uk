@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
   FaEnvelope,
@@ -20,6 +22,7 @@ import {
   FaDiscord,
   FaInstagram,
   FaLaptopCode,
+  FaRss,
 } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { FiSun, FiMoon } from "react-icons/fi";
@@ -28,18 +31,12 @@ import { contactLinks } from "../data/contactLinks.js";
 
 export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [verified, setVerified] = useState(false);
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
 
-const [theme, setTheme] = useState(() => {
-  if (typeof window !== "undefined") {
-    return localStorage.getItem("theme") || "dark";
-  }
-  return "dark";
-});
+const [theme, setTheme] = useState("dark");
 
 const isDark = theme === "dark";
 
@@ -51,7 +48,7 @@ const getIconColor = (item, theme) => {
 };
 
   const [info, setInfo] = useState({
-    headline: "Full-stack developer & Cybersecurity student",
+    headline: "Full-stack developer & Computer Science student",
     followers: 0,
     publicRepos: 0,
   });
@@ -70,8 +67,9 @@ useEffect(() => {
   if (typeof window === "undefined") return;
   const stored = localStorage.getItem("theme");
   const initial = stored === "light" ? "light" : "dark";
+  // Apply the saved preference after hydration to keep the initial HTML stable.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   setTheme(initial);
-  setMounted(true);
 
   if (initial === "dark") {
     document.documentElement.classList.add("dark");
@@ -112,8 +110,6 @@ const toggleTheme = () => {
   };
 
 
-if (!mounted) return null; // Prevents hydration mismatch
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-500">
      
@@ -126,13 +122,13 @@ if (!mounted) return null; // Prevents hydration mismatch
       "@type": "Person",
       name: "Mohammed Husnain",
       alternateName: "Husnain.UK",
-      url: "https://husnain.uk",
+      url: "https://www.husnain.uk",
       sameAs: [
         "https://github.com/hussgb",
         "https://www.linkedin.com/in/husnainuk",
         "https://discord.com/users/hussgb"
       ],
-      jobTitle: "Full-Stack Developer & Cybersecurity Student",
+      jobTitle: "Full-Stack Developer & Computer Science Student",
       worksFor: [
         {
           "@type": "Organization",
@@ -143,7 +139,7 @@ if (!mounted) return null; // Prevents hydration mismatch
         {
           "@type": "Organization",
           name: "Husnain.UK",
-          url: "https://husnain.uk"
+          url: "https://www.husnain.uk"
         }
       ],
       alumniOf: {
@@ -152,14 +148,14 @@ if (!mounted) return null; // Prevents hydration mismatch
         url: "https://www.raf.mod.uk/aircadets/"
       },
       description:
-        "Mohammed Husnain - Full-stack developer, cybersecurity student, and Sales Consultant at Next Retail. Building secure and performant digital systems through Husnain.UK.",
+        "Mohammed Husnain - Full-stack developer, Computer Science student, and Sales Consultant at Next Retail. Building secure and performant digital systems through Husnain.UK.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Birmingham",
         addressRegion: "West Midlands",
         addressCountry: "United Kingdom"
       },
-      image: "https://husnain.uk/preview.png",
+      image: "https://www.husnain.uk/preview.png",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "Online Presence",
@@ -170,40 +166,42 @@ if (!mounted) return null; // Prevents hydration mismatch
 />
 
 
-  <title>Mohammed Husnain - Full-Stack Developer & Cybersecurity Student</title>
+  <title>Mohammed Husnain - Full-Stack Developer & Computer Science Student</title>
   <meta
     name="description"
-    content="Official portfolio of Mohammed Husnain (aka HussGB), a full-stack developer and cybersecurity student based in Birmingham, UK. Building dashboards, client portals, and secure web systems under Husnain.UK."
+    content="Official portfolio of Mohammed Husnain (aka HussGB), a full-stack developer and Computer Science student based in Birmingham, UK. Building dashboards, client portals, and secure web systems under Husnain.UK."
   />
   <meta
     name="keywords"
-    content="HussGB, HussGB Discord, Discord, Mohammed Husnain, Husnain.UK, full-stack developer, web developer Birmingham, Next.js, TailwindCSS, Node.js, cybersecurity student, Idley Host, Idley, FalixNodes, Birmingham Inventors, Idle Bee Farm, Royal Air Force Air Cadets, RAFAC, RAF Cadets"
+    content="HussGB, HussGB Discord, Discord, Mohammed Husnain, Husnain.UK, full-stack developer, web developer Birmingham, Next.js, TailwindCSS, Node.js, Computer Science student, Idley Host, Idley, FalixNodes, Birmingham Inventors, Idle Bee Farm, Royal Air Force Air Cadets, RAFAC, RAF Cadets"
   />
   <meta name="author" content="Mohammed Husnain" />
   <meta name="robots" content="index, follow" />
 
   {/* Open Graph / Social preview */}
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://husnain.uk/" />
-  <meta property="og:title" content="Mohammed Husnain - Full-Stack Developer & Cybersecurity Student" />
+  <meta property="og:url" content="https://www.husnain.uk/" />
+  <meta property="og:site_name" content="Husnain.UK" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Mohammed Husnain - Full-Stack Developer & Computer Science Student" />
   <meta
     property="og:description"
-    content="Full-stack developer & cybersecurity student from Birmingham, UK. Creator of Husnain.UK and former co-founder of Idle Development."
+    content="Full-stack developer & Computer Science student from Birmingham, UK. Creator of Husnain.UK and former co-founder of Idle Development."
   />
-  <meta property="og:image" content="https://husnain.uk/preview.png" />
+  <meta property="og:image" content="https://www.husnain.uk/preview.png" />
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohammed Husnain - Full-Stack Developer & Cybersecurity Student" />
+  <meta name="twitter:title" content="Mohammed Husnain - Full-Stack Developer & Computer Science Student" />
   <meta
     name="twitter:description"
     content="Building secure, high-performance websites and applications with Next.js, TailwindCSS, and Node.js."
   />
-  <meta name="twitter:image" content="https://husnain.uk/preview.png" />
+  <meta name="twitter:image" content="https://www.husnain.uk/preview.png" />
 
   {/* Favicon */}
   <link rel="icon" href="/favicon.png" />
-  <link rel="canonical" href="https://husnain.uk/" />
+  <link rel="canonical" href="https://www.husnain.uk/" />
 </Head>
 
      
@@ -213,11 +211,13 @@ if (!mounted) return null; // Prevents hydration mismatch
           {/* Brand */}
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center text-xs font-semibold">
-             <img
-      src="/favicon.png"
-      alt="Husnain Logo"
-      className="h-full w-full object-cover"
-    />
+             <Image
+               src="/favicon.png"
+               alt="Husnain logo"
+               width={32}
+               height={32}
+               className="h-full w-full object-cover"
+             />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-semibold text-sm md:text-base">
@@ -241,9 +241,19 @@ if (!mounted) return null; // Prevents hydration mismatch
               </a>
             ))}
 
+            <Link
+              href="/rss.xml"
+              aria-label="Subscribe to the RSS feed"
+              title="RSS feed"
+              className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+            >
+              <FaRss aria-hidden="true" />
+            </Link>
+
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
               className="ml-2 inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
             >
               {theme === "dark" ? (
@@ -269,6 +279,9 @@ if (!mounted) return null; // Prevents hydration mismatch
               {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
             </button>
             <button
+              aria-label={navOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={navOpen}
+              aria-controls="mobile-navigation"
               className="p-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
               onClick={() => setNavOpen(!navOpen)}
             >
@@ -279,7 +292,7 @@ if (!mounted) return null; // Prevents hydration mismatch
 
         {/* Mobile nav dropdown */}
         {navOpen && (
-          <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur">
+          <div id="mobile-navigation" className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur">
             <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1">
               {sections.map((section) => (
                 <a
@@ -291,6 +304,14 @@ if (!mounted) return null; // Prevents hydration mismatch
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
               ))}
+              <Link
+                href="/rss.xml"
+                aria-label="Subscribe to the RSS feed"
+                className="inline-flex items-center gap-2 py-2 text-sm text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition"
+              >
+                <FaRss aria-hidden="true" />
+                RSS feed
+              </Link>
             </div>
           </div>
         )}
@@ -321,7 +342,7 @@ if (!mounted) return null; // Prevents hydration mismatch
                 <span className="font-medium text-slate-900 dark:text-slate-100">
                   Husnain.UK
                 </span>{" "}
-                while studying Cybersecurity.
+                while studying Computer Science.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -346,7 +367,7 @@ if (!mounted) return null; // Prevents hydration mismatch
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-slate-500" />
-                  Full-Stack · Cybersecurity
+                  Full-Stack · Computer Science
                 </div>
                 <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -635,9 +656,11 @@ if (!mounted) return null; // Prevents hydration mismatch
                   className="group overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 hover:border-slate-400 dark:hover:border-slate-600 transition"
                 >
                   <div className="relative h-40 overflow-hidden border-b border-slate-200/80 dark:border-slate-800">
-                    <img
+                    <Image
                       src={p.img}
                       alt={p.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 33vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -761,7 +784,7 @@ if (!mounted) return null; // Prevents hydration mismatch
               <p className="mt-2 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                 Actively building SaaS dashboards, portals, and systems under my brand{" "}
                 <strong>Husnain.UK</strong> while pursuing a degree in{" "}
-                <strong>Cybersecurity</strong> - focusing on security, performance, and clean UX.
+                <strong>Computer Science</strong> - focusing on security, performance, and clean UX.
               </p>
             </div>
           </div>
@@ -922,26 +945,6 @@ if (!mounted) return null; // Prevents hydration mismatch
 
         {/* Contact Cards */}
         <div className="grid sm:grid-cols-2 gap-6 text-left">
-         {/* SEO / AI CRAWLER CONTACT DATA (always visible in DOM) */}
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Husnain",
-      url: "https://husnain.uk",
-      email: "contact@husnain.uk",
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        email: "contact@husnain.uk",
-        availableLanguage: ["English"],
-      },
-    }),
-  }}
-/>
-
 {/* EMAIL CARD */}
 <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm hover:shadow-md transition">
 
@@ -971,10 +974,15 @@ if (!mounted) return null; // Prevents hydration mismatch
       onSubmit={handleVerify}
       className="mt-4 flex flex-col sm:flex-row gap-2 text-sm"
     >
+      <label htmlFor="verification" className="sr-only">
+        Verification phrase
+      </label>
       <input
+        id="verification"
         type="text"
         name="verification"
         placeholder="Type 'human' to unlock"
+        aria-describedby={error ? "verification-error" : undefined}
         className="flex-1 border border-slate-300 dark:border-slate-700 rounded-md p-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400/40"
       />
       <button
@@ -1014,7 +1022,7 @@ if (!mounted) return null; // Prevents hydration mismatch
   )}
 
   {error && (
-    <p className="text-xs text-red-500 mt-2 transition-all">{error}</p>
+    <p id="verification-error" role="alert" className="text-xs text-red-500 mt-2 transition-all">{error}</p>
   )}
 
   <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 italic leading-relaxed">
@@ -1119,36 +1127,36 @@ if (!mounted) return null; // Prevents hydration mismatch
 
     {/* Center: Legal links */}
     <div className="flex flex-wrap justify-center gap-4 text-xs">
-      <a
+      <Link
         href="/legal/privacy"
         className="hover:text-slate-900 dark:hover:text-slate-200 transition"
       >
         Privacy
-      </a>
-      <a
+      </Link>
+      <Link
         href="/legal/terms"
         className="hover:text-slate-900 dark:hover:text-slate-200 transition"
       >
         Terms
-      </a>
-      <a
+      </Link>
+      <Link
         href="/legal/cookies"
         className="hover:text-slate-900 dark:hover:text-slate-200 transition"
       >
         Cookies
-      </a>
-      <a
+      </Link>
+      <Link
         href="/legal/impressum"
         className="hover:text-slate-900 dark:hover:text-slate-200 transition"
       >
         Impressum
-      </a>
-      <a
+      </Link>
+      <Link
         href="/legal/accessibility"
         className="hover:text-slate-900 dark:hover:text-slate-200 transition"
       >
         Accessibility
-      </a>
+      </Link>
     </div>
 
     {/* Right: Social icons */}

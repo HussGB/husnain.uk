@@ -24,6 +24,12 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Canonical domain and legacy redirect
+
+Metadata, structured data, the sitemap, and robots file use `https://www.husnain.uk` as the canonical origin.
+
+The application is prepared for the legacy domain `hussgb.dev`, but this repository cannot configure DNS, TLS certificates, or a redirect for a separate hostname. Production hosting must permanently redirect both `https://hussgb.dev/*` and `https://www.hussgb.dev/*` to the matching path on `https://www.husnain.uk/*`, with HTTPS enabled and no intermediate redirect chain.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

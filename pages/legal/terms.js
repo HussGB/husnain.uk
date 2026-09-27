@@ -1,86 +1,41 @@
-import Head from "next/head";
-import LegalHeader from "@/components/LegalHeader";
+/* eslint-disable react/no-unescaped-entities */
+import LegalDocument, { BulletList, Section } from "@/components/LegalDocument";
 
 export default function Terms() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Terms of Use | Husnain.UK",
-    url: "https://husnain.uk/legal/terms",
-    about: {
-      "@type": "Person",
-      name: "Mohammed Husnain",
-      alternateName: "HussGB",
-      sameAs: [
-        "https://github.com/hussgb",
-        "https://www.linkedin.com/in/husnainuk",
-        "https://discord.com/users/hussgb",
-      ],
-    },
-  };
-
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
-      <Head>
-        <title>Terms of Use | Husnain.UK</title>
-        <meta
-          name="description"
-          content="Terms of Use outlining acceptable usage, intellectual property, and disclaimers for Husnain.UK."
-        />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
-
-      <LegalHeader title="Terms of Use" subtitle="Last updated: November 2025" />
-
-      <main className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
-        <Section title="Purpose">
-          <p>
-            Husnain.UK serves as the personal portfolio and professional website of{" "}
-            <strong>Mohammed Husnain (HussGB)</strong>. Its purpose is to showcase
-            projects, professional experience, and contact information.
-          </p>
-        </Section>
-
-        <Section title="Intellectual Property">
-          <p>
-            All written content, designs, and code found on this website are © Mohammed
-            Husnain unless otherwise stated. Reproduction or redistribution is
-            prohibited without permission.
-          </p>
-        </Section>
-
-        <Section title="Open Source & Attribution">
-          <p>
-            Open-source repositories linked on this site are governed by their individual
-            licenses. You must comply with each license’s terms when using or modifying
-            the source code.
-          </p>
-        </Section>
-
-        <Section title="Disclaimer">
-          <p>
-            All information provided on this website is for informational and
-            educational purposes only. No guarantees are made regarding completeness or
-            accuracy.
-          </p>
-        </Section>
-
-        <Section title="Liability">
-          <p>
-            Mohammed Husnain is not liable for any damages resulting from use or
-            inability to use this site or linked resources.
-          </p>
-        </Section>
-      </main>
-    </div>
-  );
-}
-
-function Section({ title, children }) {
-  return (
-    <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm space-y-2">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      {children}
-    </div>
+    <LegalDocument title="Website Terms of Use" path="/legal/terms" description="Terms governing access to and use of the Husnain.UK website.">
+      <Section title="1. Acceptance and scope">
+        <p>These terms govern use of the Husnain.UK website, including its pages, RSS feed, public links, and informational content. By using the site, you agree to use it lawfully and not to interfere with its operation. Customer services are governed separately by the Customer Services Terms and the written project contract.</p>
+      </Section>
+      <Section title="2. Permitted use">
+        <BulletList>
+          <li>Use the site for lawful personal, professional, and informational purposes.</li>
+          <li>Do not probe, attack, scrape abusively, overload, impersonate, reverse engineer protected functionality, or attempt unauthorised access.</li>
+          <li>Do not submit unlawful, harmful, infringing, malicious, or unnecessary sensitive information.</li>
+          <li>Do not treat general website content as legal, financial, medical, security, or professional advice.</li>
+        </BulletList>
+      </Section>
+      <Section title="3. Intellectual property">
+        <p>Unless stated otherwise, the website's original text, design, code, and branding belong to Mohammed Husnain or the relevant rights holder. Third-party libraries and assets remain subject to their own licences. You may view and link to public pages, but copying, redistributing, selling, or modifying substantial parts requires permission or a licence.</p>
+      </Section>
+      <Section title="4. Availability and accuracy">
+        <p>The site is provided on an as-available basis. Content may be incomplete, changed, delayed, or temporarily unavailable. No guarantee is made that the site, RSS feed, external links, or displayed GitHub data will be uninterrupted, current, error-free, or suitable for a particular purpose.</p>
+      </Section>
+      <Section title="5. Accounts and security">
+        <p>If an account feature is enabled, keep credentials confidential and notify <a className="underline" href="mailto:contact@husnain.uk">contact@husnain.uk</a> about suspected compromise. Registration may be refused or suspended for abuse, security, non-payment, or breach of applicable terms.</p>
+      </Section>
+      <Section title="6. External services and links">
+        <p>GitHub, Vercel, social networks, hosting providers, and other third parties operate under their own terms. Linking to them does not imply endorsement or control.</p>
+      </Section>
+      <Section title="7. Liability and consumer rights">
+        <p>Nothing in these terms excludes or limits liability that cannot lawfully be excluded, including liability for fraud, fraudulent misrepresentation, death or personal injury caused by negligence, or statutory consumer rights. Subject to that, and to the maximum extent permitted by law, liability for indirect or consequential loss arising from use of this informational website is excluded.</p>
+      </Section>
+      <Section title="8. Suspension and changes">
+        <p>Access may be restricted where reasonably necessary for security, maintenance, legal compliance, or abuse prevention. These terms may change when the site or law changes. Continued use after publication of an update may constitute acceptance where legally effective.</p>
+      </Section>
+      <Section title="9. Law and contact">
+        <p>These website terms are intended to be governed by the law of England and Wales, subject to any mandatory rights available to you. Questions and notices should be sent to <a className="underline" href="mailto:contact@husnain.uk">contact@husnain.uk</a>.</p>
+      </Section>
+    </LegalDocument>
   );
 }

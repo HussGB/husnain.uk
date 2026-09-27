@@ -6,7 +6,7 @@ export default function OpenSource() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Open Source Notice | Husnain.UK",
-    url: "https://husnain.uk/legal/open-source",
+    url: "https://www.husnain.uk/legal/open-source",
   };
 
   return (

@@ -1,64 +1,30 @@
-import Head from "next/head";
-import LegalHeader from "@/components/LegalHeader";
+/* eslint-disable react/no-unescaped-entities */
+import LegalDocument, { Section } from "@/components/LegalDocument";
 
 export default function Impressum() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Mohammed Husnain",
-    alternateName: "HussGB",
-    jobTitle: "Full-Stack Developer & Cybersecurity Student",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Birmingham",
-      addressCountry: "United Kingdom",
-    },
-    email: "contact@husnain.uk",
-  };
-
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
-      <Head>
-        <title>Impressum | Husnain.UK</title>
-        <meta
-          name="description"
-          content="Legal disclosure (Impressum) and ownership information for Husnain.UK, operated by Mohammed Husnain."
-        />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
-
-      <LegalHeader title="Impressum / Legal Disclosure" subtitle="Last updated: November 2025" />
-
-      <main className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-10 text-slate-700 dark:text-slate-300 leading-relaxed">
-        <Section title="Website Owner">
-          <p>
-            This website is owned and operated by <strong>Mohammed Husnain</strong>
-            (online alias: <strong>HussGB</strong>), based in Birmingham, United Kingdom.
-          </p>
-        </Section>
-
-        <Section title="Contact">
-          <p>
-            Email: <strong>contact@husnain.uk</strong> (verification required before sending)
-          </p>
-        </Section>
-
-        <Section title="Purpose of Website">
-          <p>
-            Husnain.UK serves as a personal portfolio and central brand hub for professional
-            projects and collaborations. It is not operated as a registered company.
-          </p>
-        </Section>
-      </main>
-    </div>
-  );
-}
-
-function Section({ title, children }) {
-  return (
-    <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm space-y-2">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      {children}
-    </div>
+    <LegalDocument title="Impressum / Legal Disclosure" path="/legal/impressum" description="Operator, contact, service, and legal disclosure information for Husnain.UK.">
+      <Section title="Operator">
+        <p><strong>Mohammed Husnain</strong></p>
+        <p>Trading and professional brands: <strong>Husnain.UK</strong>, <strong>HussGB</strong>, and, where used, <strong>HussGB Development</strong>.</p>
+        <p>Individual operator based in England, United Kingdom. VAT registration: not VAT registered, as currently stated by the operator.</p>
+      </Section>
+      <Section title="Contact and legal notices">
+        <p>General contact: <a className="underline" href="mailto:contact@husnain.uk">contact@husnain.uk</a></p>
+        <p>For formal notices, use the email subject <strong>Legal Notice HussGB</strong>. A solicitor or registered-agent service address is intended to be added before this page is relied on as a final statutory disclosure.</p>
+      </Section>
+      <Section title="Services">
+        <p>Services may include website and software development, hosting, maintenance, consultations, security work, technical operations, and related services. The exact service, price, scope, deadline, ownership, support, and data-processing arrangements are determined by the written quote or contract accepted for the engagement.</p>
+      </Section>
+      <Section title="Hosting and infrastructure">
+        <p>This website is hosted on Vercel. Customer infrastructure may use a provider chosen for the project, including a third-party cloud host, GitHub Pages, Vercel, or self-managed infrastructure. A provider list is not a promise that every listed provider is used for every customer.</p>
+      </Section>
+      <Section title="Content and links">
+        <p>External links are provided for convenience. Mohammed Husnain does not control third-party content, availability, security, privacy practices, or terms. Public GitHub information displayed by this website is retrieved from GitHub's public API.</p>
+      </Section>
+      <Section title="Update notice">
+        <p>This disclosure is incomplete until the final legal correspondence or service-address wording is confirmed with professional advice. It must be updated when the operator, business status, services, contact route, or hosting arrangement changes.</p>
+      </Section>
+    </LegalDocument>
   );
 }

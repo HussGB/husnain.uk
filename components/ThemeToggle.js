@@ -10,7 +10,8 @@ export default function ThemeToggle() {
     if (typeof window === "undefined") return;
     const stored = localStorage.getItem("theme");
     const initial = stored === "light" ? "light" : "dark";
-    setTheme(initial);
+    // The mounted flag prevents the server/client theme preference mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     document.documentElement.classList.toggle("dark", initial === "dark");
   }, []);

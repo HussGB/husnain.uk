@@ -1,59 +1,31 @@
-import Head from "next/head";
-import LegalHeader from "@/components/LegalHeader";
+/* eslint-disable react/no-unescaped-entities */
+import LegalDocument, { BulletList, Section } from "@/components/LegalDocument";
 
 export default function Cookies() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Cookie Policy | Husnain.UK",
-    url: "https://husnain.uk/legal/cookies",
-  };
-
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
-      <Head>
-        <title>Cookie & Data Use Notice | Husnain.UK</title>
-        <meta
-          name="description"
-          content="Cookie and Data Use Notice for Husnain.UK describing analytics, cookies, and data collection practices."
-        />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
-
-      <LegalHeader title="Cookie & Data Use Notice" subtitle="Last updated: November 2025" />
-
-      <main className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-10 text-slate-700 dark:text-slate-300 leading-relaxed">
-        <Section title="No Tracking Cookies">
-          <p>
-            Husnain.UK does not use tracking cookies. Analytics are limited to
-            aggregated, anonymous metrics like page views and device types.
-          </p>
-        </Section>
-
-        <Section title="Privacy-Focused Analytics">
-          <p>
-            Analytics providers such as Vercel Analytics or Plausible are used in a
-            privacy-friendly configuration with no personal identifiers.
-          </p>
-        </Section>
-
-        <Section title="Compliance">
-          <p>
-            This site complies with UK GDPR and PECR regulations by default (“no-cookies
-            by design”). No consent banners are necessary because no personal data is
-            stored or tracked.
-          </p>
-        </Section>
-      </main>
-    </div>
-  );
-}
-
-function Section({ title, children }) {
-  return (
-    <div className="border border-slate-200 dark:border-slate-800 rounded-xl p-6 bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm space-y-2">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      {children}
-    </div>
+    <LegalDocument title="Cookie & Data Use Notice" path="/legal/cookies" description="The cookies, local storage, analytics, and technical data used by Husnain.UK.">
+      <Section title="1. What cookies are used">
+        <p>The current site does not intentionally use advertising or behavioural tracking cookies. The theme control uses browser local storage to remember light or dark mode. Local storage is not sent to the server as a tracking identifier.</p>
+        <p>Vercel and other infrastructure may create essential technical cookies or process request data needed to deliver, secure, cache, and measure the service. The exact set depends on the deployed configuration and should be checked after every analytics or hosting change.</p>
+      </Section>
+      <Section title="2. Optional analytics and marketing">
+        <p>No analytics provider should be described as active unless it has actually been installed and configured. If privacy-focused analytics, newsletter tools, or marketing systems are introduced, this notice and any consent mechanism will be updated before non-essential tracking begins.</p>
+        <p>Marketing emails are sent through in-house systems to people who enrol. They should identify the sender, respect the recipient's preferences, and include a simple unsubscribe route. Promotional messages will not be sent merely because someone used the contact form.</p>
+      </Section>
+      <Section title="3. Your choices">
+        <BulletList>
+          <li>You can clear local storage or use browser controls to remove the saved theme preference.</li>
+          <li>You can block cookies, although essential functionality or security features may stop working.</li>
+          <li>You can unsubscribe from optional marketing at any time.</li>
+          <li>Where non-essential cookies or similar technologies are introduced, they will be controlled through an appropriate consent mechanism where required by PECR or other applicable law.</li>
+        </BulletList>
+      </Section>
+      <Section title="4. Customer websites">
+        <p>A website built or hosted for a customer may use different cookies, sessions, authentication, analytics, payment tools, or consent technology. The customer is responsible for approving the purposes and notices for its users; the implementation and any processing roles must be recorded in the project contract and, where needed, a data-processing agreement.</p>
+      </Section>
+      <Section title="5. Review">
+        <p>This notice must be reviewed whenever analytics, advertising, newsletters, authentication, payments, hosting, or third-party scripts are added or removed.</p>
+      </Section>
+    </LegalDocument>
   );
 }

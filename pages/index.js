@@ -636,13 +636,15 @@ const toggleTheme = () => {
                   title: "Plumb-On Services Limited Website Revamp",
                   desc: "Modern service website redesign focused on lead generation, service clarity, and trust-building. Includes booking flows, service pages, customer enquiry system, and mobile-first UX optimisation.",
                   img: "/PlumbOn.png",
+                  website: "https://www.plumb-on.co.uk/",
                   tags: ["UX/UI", "Lead Gen", "SEO", "Responsive", "Conversion"]
                 },
                 {
-                  title: "Client / Tenant Portal (Unreleased)",
-                  desc: "Multi-role portal with dashboards, order views, and admin capabilities for managing users and services.",
-                  img: "/TenancyPortal.jpg",
-                  tags: ["Dashboards", "Auth", "UX"],
+                  title: "MarketAccessPlatform Website",
+                  desc: "A website for MarketAccessPlatform, introducing its Oman market-entry support through market and cultural intelligence, strategic guidance, and connections with trusted local partners.",
+                  img: "/marketaccessplatform.jpg",
+                  website: "https://marketaccessplatform.com/",
+                  tags: ["Market Entry", "Oman", "Market Research", "Strategy", "Cultural Intelligence"],
                 },
                 {
                   title: "Automation & Internal Tools",
@@ -671,6 +673,17 @@ const toggleTheme = () => {
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       {p.desc}
                     </p>
+                    {p.website && (
+                      <a
+                        href={p.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${p.title} website (opens in a new tab)`}
+                        className="inline-flex pt-1 text-xs font-medium text-slate-700 underline underline-offset-4 hover:text-slate-950 dark:text-slate-200 dark:hover:text-white"
+                      >
+                        Visit website
+                      </a>
+                    )}
                     <div className="flex flex-wrap gap-2 pt-2">
                       {p.tags.map((t) => (
                         <span

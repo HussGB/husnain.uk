@@ -31,10 +31,10 @@ export default function LegalDocument({ title, description, path, subtitle, chil
         <meta name="description" content={description} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-      <LegalHeader title={title} subtitle={subtitle || "Last reviewed: 27 September 2026"} />
+      <LegalHeader title={title} subtitle={subtitle || "Last reviewed: 15 October 2026"} />
       <main className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed">
         <p className="text-sm border-l-4 border-slate-400 pl-4 text-slate-600 dark:text-slate-400">
-          These documents describe the current intended operation of Husnain.UK. They are not a substitute for advice from a UK solicitor. Customer engagements are governed by the written quote or contract agreed for that engagement; that contract should prevail where it contains more specific terms.
+          These documents describe the intended operation of Husnain.UK and are general information, not legal advice or a guarantee of compliance. Website terms apply only as described in the relevant document. A customer-service contract is formed and these service terms are binding only when properly offered, accepted, and incorporated into the engagement. Mandatory statutory rights always prevail. Have a UK solicitor review these documents and confirm that actual business practices match them before relying on them.
         </p>
         {children}
       </main>
